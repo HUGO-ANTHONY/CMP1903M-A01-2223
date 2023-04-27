@@ -11,9 +11,16 @@ namespace CMP1903M_A01_2223
        public Test() {
             Pack pack = new Pack();
 
-            Console.WriteLine(Pack.shuffleCardPack(1));
-            Console.WriteLine(Pack.dealCard(5));
-            Console.WriteLine(Pack.deal());
+            Random random= new Random();
+           int shuffle= random.Next(1,3);
+            pack.shuffleCardPack(shuffle);
+/*            Console.WriteLine(Pack.shuffleCardPack(shuffle));
+*/         /*   foreach (Card card in Pack.dealCard(5))
+            {
+                Console.WriteLine(card);
+            }
+            Console.WriteLine(Pack.deal());*/
+            threecards.gamebegins();
             Console.ReadLine();
         }
     }

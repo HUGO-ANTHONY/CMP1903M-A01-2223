@@ -24,9 +24,9 @@ namespace CMP1903M_A01_2223
    
         
 
-        public static bool shuffleCardPack(int typeOfShuffle)
+        public  bool shuffleCardPack(int typeOfShuffle)
         {
-            switch (typeOfShuffle)
+           /* switch (typeOfShuffle)
             {
                 case 1:
                     riffleShuffle();
@@ -37,7 +37,18 @@ namespace CMP1903M_A01_2223
                 default:
                     return false;
             }
-            return true;
+            return true;*/
+           if (typeOfShuffle == 1)
+            {
+                 riffleShuffle();
+                return true;
+            }
+           else if(typeOfShuffle== 2)
+            {
+                fisherYatesShuffle();
+                return true;
+            }
+           return false;
         }
 
         private static void fisherYatesShuffle()
