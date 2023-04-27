@@ -29,14 +29,23 @@ namespace CMP1903M_A01_2223
            /* switch (typeOfShuffle)
             {
                 case 1:
+                    Console.WriteLine("fisher yates");
                     riffleShuffle();
+                    return true;
                     break;
                 case 2:
+                    Console.WriteLine("riffle");
                     fisherYatesShuffle();
+                    return true;
                     break;
+                case 3:
+                    Console.WriteLine("no shuffle");
+                    return true;
                 default:
+                    Console.WriteLine("none");
                     return false;
             }
+<<<<<<< HEAD
             return true;*/
            if (typeOfShuffle == 1)
             {
@@ -49,6 +58,8 @@ namespace CMP1903M_A01_2223
                 return true;
             }
            return false;
+=======
+>>>>>>> cf8371edc25557f3a058d0d41e338c7f4b89b1b7
         }
 
         private static void fisherYatesShuffle()

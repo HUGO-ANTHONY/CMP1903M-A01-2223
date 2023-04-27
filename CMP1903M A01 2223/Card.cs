@@ -12,8 +12,11 @@ namespace CMP1903M_A01_2223
         //Value: numbers 1 - 13
         //Suit: numbers 1 - 4
         //The 'set' methods for these properties could have some validation
-        public int Value { get; set; }
-        public int Suit { get; set; }
+
+        private int cardValue;
+        private int suit;
+        public int Value { get { return cardValue; } set { cardValue = ValidateValue(value); } }
+        public int Suit { get { return suit; } set { suit = ValidateSuit(value); } }
         public override string ToString()
         {
             string strRank = "";
@@ -62,6 +65,34 @@ namespace CMP1903M_A01_2223
             Suit= suit;
         }
 
+<<<<<<< HEAD
+=======
+        private int ValidateSuit(int suit)
+        {
+            if (suit >= 5)
+            {
+                return 4;
+            }
+            else if (suit <= 0)
+            {
+                return 1;
+            }
+            return suit;
+        }
+
+        private int ValidateValue(int value)
+        {
+            if (value >= 14)
+            {
+                return 13;
+            }
+            else if (value <= 0)
+            {
+                return 1;
+            }
+            return value;
+        }
+>>>>>>> cf8371edc25557f3a058d0d41e338c7f4b89b1b7
 
     }
 }
